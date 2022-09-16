@@ -27,7 +27,7 @@ namespace OrderManager.WebApi.Controllers
         [HttpPost]
         [ProducesResponseType(400, Type = typeof(string))]
         [ProducesResponseType(500, Type = typeof(string))]
-        [ProducesResponseType(201)]
+        [ProducesResponseType(201, Type = typeof(Order))]
         public IActionResult CreateOrder([FromBody] Order order)
         {
             if (order == null)
